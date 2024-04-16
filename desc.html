@@ -1,0 +1,36 @@
+<style type='text/css'>
+
+.tooltip {
+	display: inline-block;
+	border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	text-align: center;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+</style>
+<div class="entry">
+	This is just the language Lua warpped in Emoji.
+	This is the lazy version, where I just regex the emojis into keywords.
+	Maybe later I'll modify my <a href='https://github.com/thenumbernine/lua-parser'>Lua parser in Lua</a> to recognize the emojis
+	so you can harmlessly embed the emojis within strings.<br>
+</div>
+
+<div id='emojiLua'>
+</div>
+<script src='main.js.lua' type='module' charset='utf-8'></script>
+<div id='lua-vm-container' class='entry'></div>
