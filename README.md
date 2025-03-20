@@ -1,4 +1,4 @@
-<a href='http://christopheremoore.net/emoji-lua'>Emoji Lua</a>
+<a href='http://thenumbernine.github.io/emoji-lua'>Emoji Lua</a>
 
 I am not proud that I have made this.
 
