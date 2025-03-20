@@ -75,8 +75,8 @@ allpairs.sort((a,b) => {
 let addChar;
 const emojiLua = document.getElementById('emojiLua');
 DOM('a', {
-	href : 'https://www.lua.org/manual/5.2/manual.html',
-	text : 'Lua 5.2 Manual',
+	href : 'https://www.lua.org/manual/5.4/manual.html',
+	text : 'Lua 5.4 Manual',
 	appendTo : emojiLua,
 });
 const table = DOM('table', {appendTo : emojiLua});
@@ -104,7 +104,7 @@ const table = DOM('table', {appendTo : emojiLua});
 
 class ThisEmbeddedLuaInterpreter extends EmbeddedLuaInterpreter {
 	executeAndPrint(s) {
-		Module.print('> '+s);
+		this.LuaModule.print('> '+s);
 		allpairs.forEach(p => {
 			let [k,e] = p;
 			if (k == "'") {
@@ -115,7 +115,7 @@ class ThisEmbeddedLuaInterpreter extends EmbeddedLuaInterpreter {
 			}
 			s = s.replaceAll(e, k);
 		});
-		//Module.print('> '+s);
+		//this.LuaModule.print('> '+s);
 		this.execute(s);
 	}
 }
