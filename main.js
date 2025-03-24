@@ -114,7 +114,7 @@ appendChildren(
 
 class ThisEmbeddedLuaInterpreter extends EmbeddedLuaInterpreter {
 	executeAndPrint(s) {
-		this.LuaModule.print('> '+s);
+		this.lib.print('> '+s);
 		allpairs.forEach(p => {
 			let [k,e] = p;
 			if (k == "'") {
@@ -125,7 +125,7 @@ class ThisEmbeddedLuaInterpreter extends EmbeddedLuaInterpreter {
 			}
 			s = s.replaceAll(e, k);
 		});
-		//this.LuaModule.print('> '+s);
+		//this.lib.print('> '+s);
 		this.execute(s);
 	}
 }
